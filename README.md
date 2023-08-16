@@ -1,16 +1,16 @@
-# Nome do projeto
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+# Controle de Aluguéis de Equipamentos
+Criar uma solução para gerenciamento de aluguel de equipamentos para construção civil. Esses equipamentos serão cadastrados no sistema tendo um código único com sua descrição.
+Para cada aluguel constará o nome do cliente que está alugando o equipamento, o tipo de equipamento sendo alugado, a data de início e término do aluguel, ovalor do aluguel por dia.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 4
-* Nome completo do aluno 4
+* Laura Lourdes Coutinho Ropdrigues
+* Leonardo Viera Machado
+* Nelson de Campos Nolasco
+* Raul Fernandes Goulart
+
 
 ## Professor responsável 
 
-* Nome completo do professor 1
+* Prof. Luiz Henrique da Costa Silva
 
