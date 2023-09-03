@@ -6,8 +6,4 @@ public class Aluguel {
     Date dataFim = new Date();
     Cliente cliente = new Cliente();
     Equipamento equipamento = new Equipamento();
-    
-    public static void main(String[] args) {
-        
-    }
 }

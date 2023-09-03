@@ -4,6 +4,7 @@ public class Equipamento {
     int codigo;
     String descricao = "";
     double valor;
+    int quantidade;
 
     public int getCodigo() {
         return codigo;
@@ -22,5 +23,16 @@ public class Equipamento {
     }
     public void setValor(double valor) {
         this.valor = valor;
+    }
+    public int getQuantidade() {
+        return quantidade;
+    }
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public static Equipamento novoEquipamento (int codigo, String descricao, double valor, int quantidade){
+        Equipamento equipamento = new Equipamento();
+        return equipamento;
     }
 }
