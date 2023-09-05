@@ -1,4 +1,6 @@
 package AlugueldeEquipamentos.src;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Gerencia {
@@ -45,5 +47,17 @@ public class Gerencia {
         }
             ;
         }while(true);
+
+         public static List<Cliente> buscarClientePorCpfENome(int cpf, String nome) {
+        List<Cliente> clientesEncontrados = new ArrayList<>();
+        
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getCpf() == cpf && cliente.getNome().equalsIgnoreCase(nome)) {
+                clientesEncontrados.add(cliente);
+            }
+        }
+        
+        return clientesEncontrados;
+    }
     }
 }

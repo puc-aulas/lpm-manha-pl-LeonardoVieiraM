@@ -1,23 +1,36 @@
 package AlugueldeEquipamentos.src;
 
 public class Cliente{
-	 private String idCliente;
-	 private String nome;
-	 
+	
+    private String nome;
+    private int cpf;
+	
+    public Cliente() {
+        this.nome = "";
+        this.cpf = 0;
+    }
+
+    public Cliente(String nome, int cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
     public String getNome() {
         return nome;
     }
-   
+
     public void setNome(String nome) {
         this.nome = nome;
     }
-	public String getIdCliente() {
-		return idCliente;
-	}
-	public String setIdCliente(String idCliente) {
-		return idCliente;
-	}
-	 public static Cliente novoCliente (String idCliente , String nome){
+
+    public int getCpf() {
+        return cpf;
+    }
+
+    public void setidcpf(int cpf) {
+        this.cpf = cpf;
+    }
+	 public static Cliente novoCliente (int cpf , String nome){
 	        Cliente cliente = new Cliente();
 	        return cliente;
 	    }
