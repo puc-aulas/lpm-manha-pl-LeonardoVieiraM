@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class Gerencia {
     Aluguel aluguel = new Aluguel();
 
@@ -48,16 +49,50 @@ public class Gerencia {
             ;
         }while(true);
 
-         public static List<Cliente> buscarClientePorCpfENome(int cpf, String nome) {
-        List<Cliente> clientesEncontrados = new ArrayList<>();
         
-        for (Cliente cliente : listaClientes) {
-            if (cliente.getCpf() == cpf && cliente.getNome().equalsIgnoreCase(nome)) {
-                clientesEncontrados.add(cliente);
+        //menu de acesso ao cliente
+        Scanner scan = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Menu:");
+            System.out.println("1) Buscar cliente por CPF e Nome");
+            System.out.println("2) Sair");
+            System.out.print("Escolha uma opção: ");
+
+            int escolha = scan.nextInt();
+            scan.nextLine(); 
+
+            if (escolha == 1) {
+                System.out.print("Digite o CPF do cliente: ");
+                int cpf = scan.nextInt();
+                scan.nextLine(); 
+
+                System.out.print("Digite o nome do cliente: ");
+                String nome = scan.nextLine();
+
+                List<Cliente> clientesEncontrados = new List<Cliente>(cpf, nome);
+
+                if (clientesEncontrados.isEmpty()) {
+                    System.out.println("Nenhum cliente encontrado.");
+                } else {
+                    System.out.println("Clientes encontrados:");
+                    for (Cliente cliente : clientesEncontrados) {
+                        System.out.println("Nome: " + cliente.getNome() + ", CPF: " + cliente.getCpf());
+                    }
+                }
+            } else if (escolha == 2) {
+                System.out.println("Saindo do programa.");
+                break;
+            } else {
+                System.out.println("Opção inválida. Tente novamente, caso queira sair digite 2.");
             }
         }
+
+        scan.close();
         
-        return clientesEncontrados;
+    
     }
-    }
+
+   
+    
 }
