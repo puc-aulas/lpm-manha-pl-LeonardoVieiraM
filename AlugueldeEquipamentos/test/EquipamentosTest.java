@@ -10,17 +10,23 @@ public class EquipamentosTest {
 
 	@Test
 	public void testGetCodigo() {
-		assertEquals(5,5);
+		Equipamentos equipamentos = new Equipamentos();
+		equipamentos.setCodigo(05);
+		assertEquals(5,equipamentos.getCodigo());
 	}
 
 	@Test
 	public void testGetDescricao() {
-		assertEquals("Britadeira", "Britadeira");
+		Equipamentos equipamentos = new Equipamentos();
+		equipamentos.setDescricao("Britadeira");
+		assertEquals("Britadeira", equipamentos.getDescricao());
 	}
 
 	@Test
 	public void testGetValor() {
-		assertEquals(250.99,250.99, 0.5);
+		Equipamentos equipamentos = new Equipamentos();
+		equipamentos.setValor(250.99);
+		assertEquals(250.99,equipamentos.getValor(), 0.5);
 	}
 /* 
 	@Test
