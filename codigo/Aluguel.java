@@ -1,9 +1,29 @@
 package codigo;
 import java.util.Date;
 
+import java.util.Date;
+
 public class Aluguel {
-    Date dataInicio = new Date();
-    Date dataFim = new Date();
-    Cliente cliente = new Cliente();
-    Equipamento equipamento = new Equipamento();
+	 private Date dataInicio;
+	 private Date dataFim;
+	 private Cliente cliente;
+	 
+	public Date getDataInicio() {
+		return dataInicio;
+	}
+	public void setDataInicio(Date dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+	public Date getDataFim() {
+		return dataFim;
+	}
+	public void setDataFim(Date dataFim) {
+		this.dataFim = dataFim;
+	}
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 }
