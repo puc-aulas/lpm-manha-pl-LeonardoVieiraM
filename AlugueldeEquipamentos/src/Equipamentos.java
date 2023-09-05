@@ -1,6 +1,6 @@
-package codigo;
+package AlugueldeEquipamentos.src;
 
-public class Equipamento {
+public class Equipamentos {
     int codigo;
     String descricao = "";
     double valor;
@@ -31,8 +31,8 @@ public class Equipamento {
         this.quantidade = quantidade;
     }
 
-    public static Equipamento novoEquipamento (int codigo, String descricao, double valor, int quantidade){
-        Equipamento equipamento = new Equipamento();
-        return equipamento;
+    public static Equipamentos novoEquipamento (int codigo, String descricao, double valor, int quantidade){
+        Equipamentos equipamentos = new Equipamentos();
+        return equipamentos;
     }
 }
