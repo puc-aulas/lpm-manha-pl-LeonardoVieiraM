@@ -1,33 +1,34 @@
 package AlugueldeEquipamentos.test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import org.junit.*;
+import AlugueldeEquipamentos.src.Cliente;
 
-import org.junit.jupiter.api.Test;
-
-class ClienteTest {
+public class ClienteTest {
 
 	@Test
-	void testGetNome() {
+	public void testGetNome() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testSetNome() {
+	public void testSetNome() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testGetIdCliente() {
+	public void testGetIdCliente() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testSetIdCliente() {
+	public void testSetIdCliente() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testNovoCliente() {
+	public void testNovoCliente() {
 		fail("Not yet implemented");
 	}
 
