@@ -1,9 +1,7 @@
-package codigo;
+package AlugueldeEquipamentos;
 import java.util.Date;
 
-import java.util.Date;
-
-public class Aluguel {
+public class Aluguel extends Equipamentos {
 	 private Date dataInicio;
 	 private Date dataFim;
 	 private Cliente cliente;

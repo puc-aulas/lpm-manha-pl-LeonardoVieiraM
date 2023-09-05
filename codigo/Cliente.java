@@ -1,7 +1,7 @@
-package codigo;
+package AlugueldeEquipamentos;
 
 public class Cliente{
-	 private Long idCliente;
+	 private String idCliente;
 	 private String nome;
 	 
     public String getNome() {
@@ -11,13 +11,13 @@ public class Cliente{
     public void setNome(String nome) {
         this.nome = nome;
     }
-	public Long getIdCliente() {
+	public String getIdCliente() {
 		return idCliente;
 	}
-	public void setIdCliente(Long idCliente) {
-		this.idCliente = idCliente;
+	public String setIdCliente(String idCliente) {
+		return idCliente;
 	}
-	 public static Cliente novoCliente (Long idCliente , String nome){
+	 public static Cliente novoCliente (String idCliente , String nome){
 	        Cliente cliente = new Cliente();
 	        return cliente;
 	    }
