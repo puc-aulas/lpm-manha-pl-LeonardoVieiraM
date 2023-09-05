@@ -1,4 +1,4 @@
-package codigo;
+package AlugueldeEquipamentos.src;
 import java.util.Scanner;
 
 public class Gerencia {
@@ -21,7 +21,7 @@ public class Gerencia {
                 String descricao = io.nextLine();
                 double valor = io.nextDouble();
                 int quantidade = io.nextInt();
-                Equipamento.novoEquipamento(codigo, descricao, valor, quantidade);
+                Equipamentos.novoEquipamento(codigo, descricao, valor, quantidade);
             break;
             //////////
             case 2:
