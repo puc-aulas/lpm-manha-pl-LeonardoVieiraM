@@ -12,7 +12,7 @@ public class Aluguel {
     private Date dataFim;
     private Cliente cliente;
 
-	
+	static	int valor aluguel
   
 	public Date getDataInicio() {
 		return dataInicio;
@@ -76,7 +76,7 @@ public int[] inserirDataFinal(){
 	System.out.println(diasDeAluguel);
 	}
 
-	public void calcularValorDoAluguelPorDia(){
+	public void calcularValorDoAluguelPorDia(long diasDeAluguel){
 		
 	}
 	

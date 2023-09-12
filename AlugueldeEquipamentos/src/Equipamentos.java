@@ -3,7 +3,7 @@ package AlugueldeEquipamentos.src;
 public class Equipamentos {
     int codigo;
     String descricao = "";
-    double valor;
+    long valor;
     int quantidade;
 
     public int getCodigo() {
@@ -12,7 +12,7 @@ public class Equipamentos {
     public String getDescricao() {
         return descricao;
     }
-    public double getValor() {
+    public long getValor() {
         return valor;
     }
     public void setCodigo(int codigo) {
@@ -21,7 +21,7 @@ public class Equipamentos {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public void setValor(double valor) {
+    public void setValor(long valor) {
         this.valor = valor;
     }
     public int getQuantidade() {
@@ -31,7 +31,7 @@ public class Equipamentos {
         this.quantidade = quantidade;
     }
 
-    public static Equipamentos novoEquipamento (int codigo, String descricao, double valor, int quantidade){
+    public static Equipamentos novoEquipamento (int codigo, String descricao, long valor, int quantidade){
         Equipamentos equipamentos = new Equipamentos();
         return equipamentos;
     }
