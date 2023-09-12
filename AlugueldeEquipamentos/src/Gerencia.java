@@ -10,6 +10,10 @@ public class Gerencia {
     static Equipamentos equipamento;
     static Equipamentos arrayEquipamento[] = new Equipamentos[MAX_EQUIPAMENTOS];
 
+    static int MAX_CLIENTE = 10;
+    static Cliente cliente;
+    static Cliente arrayCliente[] = new Cliente[MAX_EQUIPAMENTOS];
+
     Aluguel aluguel = new Aluguel();
 
     public static void main(String[] args) {
@@ -31,14 +35,21 @@ public class Gerencia {
                 int quantidade = io.nextInt();
                 equipamento = Equipamentos.novoEquipamento(codigo, descricao, valor, quantidade);
                 for(int i = 0; i < MAX_EQUIPAMENTOS; i++){
-                    if (arrayEquipamento[i] != null){
+                    if (arrayEquipamento[i] == null){
                         arrayEquipamento[i] = equipamento;
                     }
                 }
             break;
             //////////
             case 2:
-
+                String nome = io.nextLine();
+                int cpf = io.nextInt();
+                cliente = Cliente.novoCliente(cpf, nome);
+                for(int i = 0; i < MAX_CLIENTE; i++){
+                    if (arrayCliente[i] == null){
+                        arrayCliente[i] = cliente;
+                    }
+                }
             break;
             //////////
             case 3:
