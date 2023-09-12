@@ -8,6 +8,7 @@ Para cada aluguel constará o nome do cliente que está alugando o equipamento, 
 * Leonardo Viera Machado
 * Nelson de Campos Nolasco
 * Raul Fernandes Goulart
+* Rúbia Coelho de Matos
 
 
 ## Professor responsável 
