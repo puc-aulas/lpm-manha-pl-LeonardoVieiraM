@@ -75,7 +75,7 @@ public int[] inserirDataFinal(){
 	System.out.println(diasDeAluguel);
 	}
 
-	public long calcularValorDoAluguelPorDia(long diasDeAluguel, Equipamentos equipamento){
+	public static long calcularValorDoAluguelPorDia(long diasDeAluguel, Equipamentos equipamento){
 		long aluguel = equipamento.getValor() * diasDeAluguel;
 		return aluguel;
 	}

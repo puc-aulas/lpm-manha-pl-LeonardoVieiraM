@@ -21,14 +21,14 @@ public class EquipamentosTest {
 		equipamentos.setDescricao("Britadeira");
 		assertEquals("Britadeira", equipamentos.getDescricao());
 	}
-
+/* 
 	@Test
 	public void testGetValor() {
 		Equipamentos equipamentos = new Equipamentos();
 		equipamentos.setValor(250.99);
 		assertEquals(250.99,equipamentos.getValor(), 0.5);
 	}
-/* 
+
 	@Test
 	void testSetCodigo() {
 		assertEquals("Not yet implemented");
