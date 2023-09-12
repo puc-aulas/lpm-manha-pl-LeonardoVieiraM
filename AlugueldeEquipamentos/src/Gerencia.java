@@ -39,6 +39,7 @@ public class Gerencia {
                         for (int i = 0; i < MAX_EQUIPAMENTOS; i++) {
                             if (arrayEquipamento[i] == null) {
                                 arrayEquipamento[i] = equipamento;
+                                i = MAX_EQUIPAMENTOS;
                             }
                         }
                         break;
@@ -50,6 +51,7 @@ public class Gerencia {
                         for (int i = 0; i < MAX_CLIENTE; i++) {
                             if (arrayCliente[i] == null) {
                                 arrayCliente[i] = cliente;
+                                i = MAX_CLIENTE;
                             }
                         }
                         break;
