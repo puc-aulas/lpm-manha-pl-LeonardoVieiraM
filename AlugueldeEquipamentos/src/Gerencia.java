@@ -61,7 +61,10 @@ static List<Cliente> clientesEncontrados = new List<Cliente>(int cpf , String no
                         break;
                     //////////
                     case 3:
-
+                    long diasDeAluguel = io.nextLong(); 
+                    Equipamentos equipamentos = new Equipamentos();
+                    Aluguel.calcularValorDoAluguelPorDia(long diasDeAluguel, Equipamentos equipamentos);
+                    
                         break;
                     //////////
                     case 4:

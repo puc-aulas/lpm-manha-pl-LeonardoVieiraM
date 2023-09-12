@@ -12,7 +12,6 @@ public class Aluguel {
     private Date dataFim;
     private Cliente cliente;
 
-	static	int valor aluguel
   
 	public Date getDataInicio() {
 		return dataInicio;
@@ -45,13 +44,13 @@ public class Aluguel {
 	int mesInicial = scan.nextInt();
 	System.out.println("mesInicial");
 
-	System.out.println("insira a ano de inicio");
+	System.out.println("insira a dia de inicio");
 	int diaInicial = scan.nextInt();
 	System.out.println("diaInicial");
 
 	return new int[]{anoInicial, mesInicial, diaInicial};
 }
-// ler data inicial
+// ler data final
 public int[] inserirDataFinal(){
     Scanner scan = new Scanner(System.in);
 	System.out.println("insira o ano final");
@@ -76,8 +75,9 @@ public int[] inserirDataFinal(){
 	System.out.println(diasDeAluguel);
 	}
 
-	public void calcularValorDoAluguelPorDia(long diasDeAluguel){
-		
+	public long calcularValorDoAluguelPorDia(long diasDeAluguel, Equipamentos equipamento){
+		long aluguel = equipamento.getValor() * diasDeAluguel;
+		return aluguel;
 	}
 	
 }
