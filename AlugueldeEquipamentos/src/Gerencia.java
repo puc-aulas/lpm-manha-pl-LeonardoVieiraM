@@ -2,9 +2,14 @@ package AlugueldeEquipamentos.src;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.io.*;
 
 
 public class Gerencia {
+    static int MAX_EQUIPAMENTOS = 10;
+    static Equipamentos equipamento;
+    static Equipamentos arrayEquipamento[] = new Equipamentos[MAX_EQUIPAMENTOS];
+
     Aluguel aluguel = new Aluguel();
 
     public static void main(String[] args) {
@@ -24,7 +29,12 @@ public class Gerencia {
                 String descricao = io.nextLine();
                 double valor = io.nextDouble();
                 int quantidade = io.nextInt();
-                Equipamentos.novoEquipamento(codigo, descricao, valor, quantidade);
+                equipamento = Equipamentos.novoEquipamento(codigo, descricao, valor, quantidade);
+                for(int i = 0; i < MAX_EQUIPAMENTOS; i++){
+                    if (arrayEquipamento[i] != null){
+                        arrayEquipamento[i] = equipamento;
+                    }
+                }
             break;
             //////////
             case 2:
