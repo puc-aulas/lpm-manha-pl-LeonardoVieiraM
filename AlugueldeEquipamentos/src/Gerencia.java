@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Gerencia {
     Aluguel aluguel = new Aluguel();
-
+static List<Cliente> clientesEncontrados = new List<Cliente>(int cpf , String nome);
     public static void main(String[] args) {
         do{
             System.out.println("1: Adicionar novo equipamento.");
@@ -70,7 +70,7 @@ public class Gerencia {
                 System.out.print("Digite o nome do cliente: ");
                 String nome = scan.nextLine();
 
-                List<Cliente> clientesEncontrados = new List<Cliente>(cpf, nome);
+                
 
                 if (clientesEncontrados.isEmpty()) {
                     System.out.println("Nenhum cliente encontrado.");
