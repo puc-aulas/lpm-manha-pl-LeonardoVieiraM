@@ -1,4 +1,4 @@
-
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import AlugueldeEquipamentos.src.Aluguel;
 import AlugueldeEquipamentos.src.Equipamentos;
