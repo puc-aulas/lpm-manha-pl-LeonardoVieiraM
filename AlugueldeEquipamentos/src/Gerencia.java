@@ -15,13 +15,11 @@ public class Gerencia {
     static Cliente arrayCliente[] = new Cliente[MAX_EQUIPAMENTOS];
 
     Aluguel aluguel = new Aluguel();
-<<<<<<< HEAD
-static List<Cliente> clientesEncontrados = new List<Cliente>(int cpf , String nome);
-=======
+
+    static List<Cliente> clientesEncontrados = new List<Cliente>(int cpf, String nome);
 
     static int opcao;
 
->>>>>>> 7f3ec36c99df01d62e5397c20f64f66c29108b2f
     public static void main(String[] args) {
         do {
             System.out.println("1: Adicionar novo equipamento.");
@@ -37,7 +35,7 @@ static List<Cliente> clientesEncontrados = new List<Cliente>(int cpf , String no
                     case 1:
                         int codigo = io.nextInt();
                         String descricao = io.nextLine();
-                        double valor = io.nextDouble();
+                        long valor = io.nextLong();
                         int quantidade = io.nextInt();
                         equipamento = Equipamentos.novoEquipamento(codigo, descricao, valor, quantidade);
                         for (int i = 0; i < MAX_EQUIPAMENTOS; i++) {
@@ -61,14 +59,50 @@ static List<Cliente> clientesEncontrados = new List<Cliente>(int cpf , String no
                         break;
                     //////////
                     case 3:
-                    long diasDeAluguel = io.nextLong(); 
-                    Equipamentos equipamentos = new Equipamentos();
-                    Aluguel.calcularValorDoAluguelPorDia(long diasDeAluguel, Equipamentos equipamentos);
-                    
+                        long diasDeAluguel = io.nextLong();
+                        Equipamentos equipamentos = new Equipamentos();
+                        Aluguel.calcularValorDoAluguelPorDia(diasDeAluguel, equipamentos);
+
                         break;
                     //////////
                     case 4:
 
+                        // menu de acesso ao cliente
+                        Scanner scan = new Scanner(System.in);
+
+                        while (true) {
+                            System.out.println("Menu:");
+                            System.out.println("1) Buscar cliente por CPF e Nome");
+                            System.out.println("2) Sair");
+                            System.out.print("Escolha uma opção: ");
+
+                            int escolha = scan.nextInt();
+                            scan.nextLine();
+
+                            if (escolha == 1) {
+                                System.out.print("Digite o CPF do cliente: ");
+                                int cpf2 = scan.nextInt();
+                                scan.nextLine();
+
+                                System.out.print("Digite o nome do cliente: ");
+                                String nome2 = scan.nextLine();
+
+                                if (clientesEncontrados.isEmpty()) {
+                                    System.out.println("Nenhum cliente encontrado.");
+                                } else {
+                                    System.out.println("Clientes encontrados:");
+                                    for (Cliente cliente : clientesEncontrados) {
+                                        System.out.println("Nome: " + cliente.getNome() + ", CPF: " + cliente.getCpf());
+                                    }
+                                }
+                            } else if (escolha == 2) {
+                                System.out.println("Saindo do programa.");
+                                break;
+                            } else {
+                                System.out.println("Opção inválida. Tente novamente, caso queira sair digite 2.");
+                            }
+                        }
+                        scan.close();
                         break;
                     //////////
                     case 5:
@@ -81,46 +115,6 @@ static List<Cliente> clientesEncontrados = new List<Cliente>(int cpf , String no
             }
             ;
         } while (opcao != 5);
-
-        // menu de acesso ao cliente
-        Scanner scan = new Scanner(System.in);
-
-        while (true) {
-            System.out.println("Menu:");
-            System.out.println("1) Buscar cliente por CPF e Nome");
-            System.out.println("2) Sair");
-            System.out.print("Escolha uma opção: ");
-
-            int escolha = scan.nextInt();
-            scan.nextLine();
-
-            if (escolha == 1) {
-                System.out.print("Digite o CPF do cliente: ");
-                int cpf = scan.nextInt();
-                scan.nextLine();
-
-                System.out.print("Digite o nome do cliente: ");
-                String nome = scan.nextLine();
-
-                
-
-                if (clientesEncontrados.isEmpty()) {
-                    System.out.println("Nenhum cliente encontrado.");
-                } else {
-                    System.out.println("Clientes encontrados:");
-                    for (Cliente cliente : clientesEncontrados) {
-                        System.out.println("Nome: " + cliente.getNome() + ", CPF: " + cliente.getCpf());
-                    }
-                }
-            } else if (escolha == 2) {
-                System.out.println("Saindo do programa.");
-                break;
-            } else {
-                System.out.println("Opção inválida. Tente novamente, caso queira sair digite 2.");
-            }
-        }
-
-        scan.close();
 
     }
 
