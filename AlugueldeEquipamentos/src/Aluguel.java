@@ -68,11 +68,11 @@ public int[] inserirDataFinal(){
 	return new int[]{anoFinal, mesFinal, diaFinal};
 }
 	
-	public void calcularDias(int anoInicial,int mesInicial, int diaInicial,int anoFinal ,int mesFinal,int diaFinal){
+	public long calcularDias(int anoInicial,int mesInicial, int diaInicial,int anoFinal ,int mesFinal,int diaFinal){
 	LocalDate starDate = LocalDate.of(anoInicial,mesInicial,diaInicial);
 	LocalDate enDate = LocalDate.of(anoFinal,mesFinal,diaFinal);
 	long diasDeAluguel = ChronoUnit.DAYS.between(starDate, enDate);
-	System.out.println(diasDeAluguel);
+	return diasDeAluguel;
 	}
 
 	public long calcularValorDoAluguelPorDia(long diasDeAluguel, Equipamentos equipamento){
